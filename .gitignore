@@ -1,0 +1,6 @@
+bin/
+obj/
+.vs/
+*.user
+save.json
+.sandbox-probe
