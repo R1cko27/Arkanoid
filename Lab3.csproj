@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Compile Remove="Lab3.Tests\**" />
+    <Compile Remove="Lab4\**" />
   </ItemGroup>
 
 </Project>

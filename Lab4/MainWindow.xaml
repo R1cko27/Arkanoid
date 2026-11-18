@@ -1,0 +1,31 @@
+<!-- Главное окно игры -->
+<Window x:Class="Lab4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Arkanoid"
+        Width="1044" Height="560"
+        Background="#FF202020"
+        WindowStartupLocation="CenterScreen"
+        Focusable="True"
+        KeyDown="Window_KeyDown">
+    <DockPanel>
+        <!-- Состояние игры -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10,8,10,4">
+            <TextBlock Text="Счёт: " Foreground="White" FontSize="16"/>
+            <TextBlock x:Name="ScoreText" Text="0" Foreground="#FFE0E0E0" FontSize="16" FontWeight="Bold"/>
+            <TextBlock Text="      Жизни: " Foreground="White" FontSize="16"/>
+            <TextBlock x:Name="LivesText" Text="3" Foreground="#FFE0E0E0" FontSize="16" FontWeight="Bold"/>
+            <TextBlock Text="      Кирпичи: " Foreground="White" FontSize="16"/>
+            <TextBlock x:Name="BricksText" Text="40" Foreground="#FFE0E0E0" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <!-- Подсказка по управлению -->
+        <TextBlock DockPanel.Dock="Bottom" Margin="10,4,10,8" Foreground="#FF9A9A9A" FontSize="12"
+                   Text="← → — движение ракетки, Space — запуск мяча, Esc — сохранить и выйти"/>
+
+        <!-- Игровое поле: 50 клеток по 20 пикселей (1000×400 пикселей) -->
+        <Border Background="Black" Margin="10">
+            <Canvas x:Name="Field" Width="1000" Height="400" ClipToBounds="True"/>
+        </Border>
+    </DockPanel>
+</Window>
